@@ -1,0 +1,141 @@
+<Environment>
+    <Variable>
+        <Name>LOG_LEVEL</Name>
+        <Value>DEBUG</Value>
+    </Variable>
+    <Variable>
+        <Name>LOG_TIMESTAMPING</Name>
+        <Value>True</Value>
+    </Variable>
+    <Variable>
+        <Name>LOG_REPORT_EVENT</Name>
+        <Value>False</Value>
+    </Variable>
+    <Variable>
+        <Name>LOGIN_DELAY</Name>
+        <Value>12</Value>
+    </Variable>
+    <Variable>
+        <Name>CONF_DIR</Name>
+        <Value>conf</Value>
+    </Variable>
+    <Variable>
+        <Name>SUITES_DIR</Name>
+        <Value>suites</Value>
+    </Variable>
+    <Variable>
+        <Name>TESTCASES_DIR</Name>
+        <Value>testcases\ScheduledReports</Value>
+    </Variable>
+    <Variable>
+        <Name>FLOWS_DIR</Name>
+        <Value>flows</Value>
+    </Variable>
+    <Variable>
+        <Name>REPORT_MANAGER_NEW_REPORT_CLOSE</Name>
+        <Value>False</Value>
+    </Variable>
+    <Variable>
+        <Name>RESULTS_DIR</Name>
+        <Value>C:\IVM_Automation_Michael\ResultsDir</Value>
+    </Variable>
+    <Variable>
+        <Name>OPERATING_SYSTEM</Name>
+        <Value>Win 7</Value>
+    </Variable>
+       <Variable> 
+          <Name>MAIL_ENABLED</Name> 
+          <Value>True</Value> 
+    </Variable>
+    <Variable> 
+          <Name>MAIL_TO_USERS</Name> 
+          <Value>michael.woodside@schange.com</Value> 
+    </Variable> 
+    <Variable> 
+          <Name>MAIL_CC_USERS</Name> 
+          <Value></Value> 
+    </Variable>
+    <Variable> 
+          <Name>MAIL_SUBJECT</Name> 
+          <Value>IVM: QTP Functional Automation Test Results:CMW :Campaign Summary report</Value> 
+    </Variable>
+    <Variable> 
+          <Name>MAIL_BODY</Name> 
+          <Value>
+Please review the attached report. 
+The automation execution is performed with test environment Win7/IE 9 browser. 
+
+*******************************************************************************************
+**************************************************************************
+
+This is an auto-generated e-mail from Fonantrix team. Please do not reply to this auto generated email notification.
+It has been sent from an e-mail account that is not monitored. In case of any assistance queries/feedback, please email us at (qa@fonantrix.com).
+
+If you are not the intended recipient: any disclosure, copying, use or distribution of the information included in this message and any attachments is prohibited. 
+If you have received this communication in error, please notify us by reply e-mail at (qa@fonantrix.com) and permanently delete this message and any attachments.
+
+*******************************************************************************************
+**************************************************************************
+
+Regards, 
+Fonantrix QA team 
+</Value> 
+    </Variable>
+    <Variable>
+        <Name>START_NEW_BROWSERS</Name>
+        <Value>True</Value>
+    </Variable>
+    <Variable>
+        <Name>STOP_BROWSERS</Name>
+        <Value>False</Value>
+    </Variable>
+    <Variable>
+        <Name>BROWSER_PATH</Name>
+        <Value>C:\Program Files (x86)\Internet Explorer\iexplore.exe</Value>
+    </Variable>
+   
+	<Variable>
+        <Name>DATABASE_CONNECTION_PROVIDER</Name>
+        <Value>MSDASQL</Value>
+    </Variable>
+    <Variable>
+        <Name>IVM_SYS_DATABASE_CONNECTION_STRING</Name>
+        <Value>Driver={MySQL ODBC 5.1 Driver};Server=192.168.213.7;Database=ivm_sys; User=ivm;Password=ivm;Option=3</Value>
+    </Variable>
+	<Variable>
+        <Name>IVM_PRODUCTION_DATABASE_CONNECTION_STRING</Name>
+        <Value>Driver={MySQL ODBC 5.1 Driver};Server=192.168.213.21;Database=mmc_production; User=admin;Password=admin;Option=3</Value>
+    </Variable>
+	<Variable>
+        <Name>ADMIN_USER</Name>
+        <Value>admin</Value>
+    </Variable>
+	<Variable>
+        <Name>ADMIN_PASSWORD</Name>
+        <Value>admin@123</Value>
+    </Variable>
+	<Variable>
+        <Name>APPLICATION_URL</Name>
+        <Value>https://192.168.213.6:8443/mmc</Value>
+    </Variable>
+	<Variable>
+        <Name>XML_Path</Name>
+        <Value>\lib\Misc\OutputXML.xml</Value>
+    </Variable>
+ 	<Variable>
+        <Name>ERROR_DIALOG_ON_END</Name>
+        <Value>TRUE</Value>
+    </Variable>
+	<Variable>
+        <Name>REPORT_START_DATE1</Name>
+        <Value>2013-02-05</Value>
+    </Variable>
+	<Variable>
+        <Name>REPORT_END_DATE1</Name>
+        <Value>2013-02-10</Value>
+    </Variable>
+	<Variable>
+        <Name>DATA_GATEWAY_URL</Name>
+        <Value>http://192.168.213.7:50091/datagateway/api/</Value>
+    </Variable>
+</Environment>

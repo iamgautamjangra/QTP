@@ -1,0 +1,2 @@
+DataSet,strTimeRange,strCampaign,strEmail,strStorageLocation,strReportFormat,strDataType,strComments,strRegionGroupName,strRegionGroupName1,strRegionGroupNameInv
+datasetvalue,All,All,abc@xyz.com,abcd@@##,XLS,Preferred Data,This is Regionsummary report...&&&&&,ACD Perf 1,ACD Perf 2,aassdfg

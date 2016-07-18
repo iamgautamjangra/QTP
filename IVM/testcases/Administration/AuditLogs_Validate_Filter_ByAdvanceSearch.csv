@@ -1,0 +1,2 @@
+SearchTerm,SearchStartTime,SearchEndTime,SearchUserName,SearchUserAction,SearchItemType,SearchItemName,SearchTermBlank,SearchStartTimeBlank,SearchEndTimeBlank,SearchUserNameBlank,SearchUserActionBlank,SearchItemTypeBlank,SearchItemNameBlank
+admin,2012-06-03 12:00 AM,2012-07-03 12:00 AM,admin,Destroy,Role,ATestRole1,,,,,,,

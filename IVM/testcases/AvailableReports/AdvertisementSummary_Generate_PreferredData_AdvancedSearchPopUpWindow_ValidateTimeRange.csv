@@ -1,0 +1,2 @@
+strEmail,strStorageLocation,strReportFormat,strDataType,strComments,strTimeRange,strTimeRange1,strTimeRangeAll
+abc@xyz.com,abcd@@##,CSV,Preferred Data,This is Campaign summary report...&&&&&,2014-07-02 00,2014-07-02 01,All

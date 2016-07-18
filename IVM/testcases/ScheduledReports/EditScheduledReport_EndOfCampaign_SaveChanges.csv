@@ -1,0 +1,2 @@
+SearchVal,strFirstDate,strLastDate,strSites,strProvider,strCampaign,strGroupBy,strFrequency,strStorageLocation,strReportFormat,strDataType,strEmail,strComments
+End of Campaign,2013-08-10,2013-08-30,ACD Site 1,All,Campaign1000-242.182,By Hour,Repeat Daily,,XLS,Detailed Data,nirdosh.chaudhary@fonantrix.com,This is End Of Campaign report

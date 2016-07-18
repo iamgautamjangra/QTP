@@ -1,0 +1,6 @@
+strStartDate,strEndDate,ErrorStartDate,ErrorEndDate
+,2013-04-15,Start date is required.,
+2013-04-15,,,End date is required.
+,,Start date is required.,End date is required.
+2013-01-15,2013-01-01,,End date must be greater than Start date.
+2013-04-15,2013-04-16,Start date must not be greater than current date.,End date must not be greater than current date.

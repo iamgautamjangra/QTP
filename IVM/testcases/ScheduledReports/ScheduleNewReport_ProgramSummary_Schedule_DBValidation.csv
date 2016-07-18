@@ -1,0 +1,2 @@
+strFirstDate,strLastDate,strEndDate,strSites,strProvider,strCampaign,strGroupBy,strFrequency,strStorageLocation,strReportFormat,strDataType,strEmail,strComments
+2013-08-01,2013-08-30,2013-10-30,ACD Site 2,All,Campaign1000-242.182,By Hour,Repeat Daily,,XLS,Preferred Data,nimish.kumar@fonantrix.com,This is program summary report

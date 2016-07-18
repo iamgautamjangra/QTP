@@ -1,0 +1,2 @@
+SearchVal,strFirstDate,strLastDate,strSites,strProvider,strCampaign,strGroupBy,strFrequency,strStorageLocation,strReportFormat,strDataType,strEmail,strComments
+All Details,2013-08-10,2013-08-30,ACD Site 2,All,Campaign1000-242.182,By Hour,Repeat Never,,CSV,Detailed Data,nirdosh.chaudhary@fonantrix.com,This is All Details report

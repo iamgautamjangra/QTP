@@ -1,0 +1,2 @@
+DataSet,strEmail,strStorageLocation,strReportFormat,strDataType,strComments,strElementNumber,strElementNumber1,strProgramPID,strProgramPID1,strTimeRange,strTimeRange1,strCampaignName,strCampaignName1,strAdTitle,strAdTitle1,strClockNumber,strClockNumber1
+AdSummary498_20130924003606,abc@xyz.com,abcd@@##,CSV,Preferred Data,This is Program summary report...&&&&&,2,0,All,All,2014-02-04,2014-02-07,Campaign1145-163.546,Campaign1144-153.762,Copy-testsite-43-1,Copy-testsite-44-1,Spot3,Spot3

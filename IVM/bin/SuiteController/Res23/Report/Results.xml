@@ -1,0 +1,1877 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE Report
+[
+<!ELEMENT Report (General ,(Doc|BPT)) >
+<!ATTLIST Report ver CDATA #REQUIRED tmZone CDATA #REQUIRED>
+
+<!ELEMENT General ( DocLocation ) >
+<!ATTLIST General productName CDATA #REQUIRED productVer CDATA #REQUIRED os CDATA #REQUIRED host CDATA #REQUIRED qcserver CDATA #IMPLIED qcproject CDATA #IMPLIED  >
+
+<!ELEMENT BPT (DName,Res,DVer?,TSet?,TInst?,NodeArgs,AdditionalInfo*,Doc*) >
+<!ATTLIST BPT rID ID #REQUIRED >
+
+<!ELEMENT Doc (DName,ConfName?,Res,DVer?,TSet?,TInst?,RunType?,DT?,AdditionalInfo*,Step*,DIter*,Step*,Action*,Doc*,Summary?,TestMaintenanceSummary*,NodeArgs?) >
+<!ATTLIST Doc rID ID #REQUIRED type (Test|BC|BPTWrapperTest|Flow|Group) "Test" productName CDATA #REQUIRED BCIter CDATA #IMPLIED >
+
+<!ELEMENT RunType ( #PCDATA )>
+<!ATTLIST RunType fmStep (False|True) "False" batch (False|True) "False" upDesc (False|True) "False" upChk (False|True) "False" upAS (False|True) "False">
+
+<!ELEMENT DName ( #PCDATA ) >
+
+<!ELEMENT ConfName ( #PCDATA ) >
+
+<!ELEMENT Res ( #PCDATA ) >
+
+<!ELEMENT AdditionalInfo (AdditionalDataName,AdditionalDataValue ) >
+
+<!ELEMENT AdditionalDataName ( #PCDATA ) >
+
+<!ELEMENT AdditionalDataValue ( #PCDATA ) >
+
+<!ELEMENT DVer ( #PCDATA ) >
+
+<!ELEMENT TSet ( #PCDATA ) >
+
+<!ELEMENT TInst ( #PCDATA ) >
+
+<!ELEMENT DIter (Step*,Action+,Summary?,NodeArgs)>
+<!ATTLIST DIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT DocLocation ( #PCDATA )>
+
+<!ELEMENT Action (AName,AIter*,(Step|HtmlStep|Action)*,Summary,ActionMaintenanceSummary*,NodeArgs ) >
+<!ATTLIST Action rID ID #REQUIRED>
+
+<!ELEMENT AIter ((Step|HtmlStep|Action)*,Summary?,NodeArgs) >
+<!ATTLIST AIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT AName ( #PCDATA ) >
+
+<!ELEMENT TestMaintenanceSummary (ActionMaintenanceSummary*) >
+<!ATTLIST TestMaintenanceSummary ObjectsAdded CDATA #REQUIRED ObjectsUpdated CDATA #REQUIRED StepsUpdated CDATA #REQUIRED StepsComments CDATA #REQUIRED><!ELEMENT ActionMaintenanceSummary (ObjectChange* ) >
+<!ATTLIST ActionMaintenanceSummary Action CDATA #REQUIRED Objects CDATA #REQUIRED Updated CDATA #REQUIRED LinesTotal CDATA #REQUIRED Added CDATA #REQUIRED LinesUpdated CDATA #REQUIRED>
+
+<!ELEMENT ObjectChange  (Hierarchy, PropertyChangeList* ) >
+<!ATTLIST ObjectChange Operation CDATA #IMPLIED OriginalRepository CDATA #IMPLIED>
+
+<!ELEMENT PropertyChangeList (PropertyDef*) >
+
+<!ELEMENT PropertyDef (OriginalValue, NewValue) >
+<!ATTLIST PropertyDef PropName CDATA #REQUIRED OriginRegularExpression (True|False) "False" NewRegularExpression (True|False) "False" AddedProperty (True|False) "False" >
+
+<!ELEMENT OriginalValue ( #PCDATA )>
+
+<!ELEMENT NewValue ( #PCDATA )>
+
+<!ELEMENT Hierarchy  (ObjectName, Hierarchy*) >
+<!ATTLIST Hierarchy MicClass CDATA #REQUIRED>
+
+<!ELEMENT ObjectName  ( #PCDATA ) >
+
+<!ELEMENT Step (Obj,Details,Time,TimeTick* ,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST Step rID ID #REQUIRED retval CDATA #IMPLIED>
+
+<!ELEMENT HtmlStep (HTML,TimeTick*,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST HtmlStep rID ID #REQUIRED >
+
+<!ELEMENT Obj ( #PCDATA ) >
+<!ATTLIST Obj plainTxt (False|True) "True">
+
+<!ELEMENT Details ( #PCDATA ) >
+<!ATTLIST Details plainTxt (False|True) "True">
+
+<!ELEMENT Time ( #PCDATA ) >
+
+<!ELEMENT HTML ( #PCDATA ) >
+
+<!ELEMENT Disp ( #PCDATA ) >
+
+<!ELEMENT TimeTick ( #PCDATA ) >
+
+<!ELEMENT NodeArgs (Disp,TopPane?,BtmPane?,ExtendedInfo? )>
+<!ATTLIST NodeArgs eType CDATA #REQUIRED icon CDATA #REQUIRED nRep CDATA #REQUIRED UserNote CDATA #IMPLIED filter (False|True) "True">
+<!ATTLIST NodeArgs status (Passed|Failed|Done|Warning|Information) "Done">
+<!ATTLIST NodeArgs iconSel CDATA #IMPLIED nType CDATA #IMPLIED MovieMarker CDATA "">
+<!ATTLIST NodeArgs Source CDATA #IMPLIED SourceLine CDATA #IMPLIED >
+
+<!ELEMENT TopPane (Path)>
+
+<!ELEMENT BtmPane ( (Path|WR)?,ASHilite?)>
+<!ATTLIST BtmPane vType CDATA "HTML">
+
+<!ELEMENT Path ( #PCDATA ) >
+
+<!ELEMENT ASHilite ( #PCDATA ) >
+
+<!ELEMENT WR ( #PCDATA ) >
+
+<!ELEMENT ExtendedInfo ( StepData ) >
+
+<!ATTLIST ExtendedInfo StepType CDATA #REQUIRED>
+<!ELEMENT DT (NodeArgs) >
+<!ATTLIST DT rID ID #REQUIRED>
+
+<!ELEMENT Summary (Param*)>
+<!ATTLIST Summary sTime CDATA #IMPLIED eTime CDATA #IMPLIED passed CDATA #IMPLIED failed CDATA #IMPLIED warnings CDATA #IMPLIED retval CDATA #IMPLIED stopped (False|True) "False" >
+
+<!ELEMENT Param (ParamName,ParamVal)+ >
+<!ATTLIST Param paramInOut (In|Out) "In">
+
+<!ELEMENT ParamName ( #PCDATA ) >
+
+<!ELEMENT ParamVal ( #PCDATA ) >
+
+]
+>
+<Report ver="2.0" tmZone="India Standard Time">
+<General productName="QuickTest Professional" productVer="11.00" os="Windows 2008 R2" host="SEA-QTP2"><DocLocation><![CDATA[C:\IVM_Automation_Michael\IVM\bin\SuiteController]]></DocLocation></General>
+<Doc rID="T1"   productName= "QuickTest Professional"  >
+<DName><![CDATA[SuiteController]]></DName>
+<Res><![CDATA[Res23]]></Res>
+<DT rID="T2">
+<NodeArgs eType="Table" icon="2" nRep="4" filter="False" >
+<Disp><![CDATA[Run-Time Data Table]]></Disp>
+<BtmPane vType="Table">
+<Path><![CDATA[Default.xls]]></Path>
+</BtmPane>
+</NodeArgs>
+</DT>
+<DIter rID="T3" iterID="1" >
+<Action rID="T4">
+<AName><![CDATA[SuiteController]]></AName>
+<Step rID="T5">
+<Obj ><![CDATA[SETUP Suite: Comprehensive]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:14:53]]></Time>
+<TimeTick>1399027493</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="8" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[SETUP Suite: Comprehensive]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T6">
+<Obj ><![CDATA[START Suite: Comprehensive]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:14:53]]></Time>
+<TimeTick>1399027493</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="9" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[START Suite: Comprehensive]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T7">
+<Obj ><![CDATA[SETUP Flow: Scheduled_CampaignSummary]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:14:53]]></Time>
+<TimeTick>1399027493</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="10" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[SETUP Flow: Scheduled_CampaignSummary]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T8">
+<Obj ><![CDATA[STEP: ivm.startivmBrowser]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:14:53]]></Time>
+<TimeTick>1399027493</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="11" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.startivmBrowser]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T9">
+<Obj plainTxt="False" ><![CDATA[SystemUtil]]></Obj>
+<Details plainTxt="False" ><![CDATA[SystemUtil]]></Details>
+<Time><![CDATA[2014-05-02 - 16:14:54]]></Time>
+<TimeTick>1399027494</TimeTick>
+<Step rID="T10">
+<Obj plainTxt="False" ><![CDATA[Run "C:\Program Files (x86)\Internet Explorer\iexplore.exe",1]]></Obj>
+<Details plainTxt="False" ><![CDATA[Run "C:\Program Files (x86)\Internet Explorer\iexplore.exe",1]]></Details>
+<Time><![CDATA[2014-05-02 - 16:14:54]]></Time>
+<TimeTick>1399027494</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="15" status="Passed" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[Run "C:\Program Files (x86)\Internet Explorer\iexplore.exe",1]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="6" nRep="14" status="Passed" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[SystemUtil]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T11">
+<Obj plainTxt="False" ><![CDATA[SeaChangeManagementConsole]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[2014-05-02 - 16:14:59]]></Time>
+<TimeTick>1399027499</TimeTick>
+<Step rID="T12">
+<Obj plainTxt="False" ><![CDATA[pgCertificateErrorNavigation]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[2014-05-02 - 16:14:59]]></Time>
+<TimeTick>1399027499</TimeTick>
+<Step rID="T13">
+<Obj plainTxt="False" ><![CDATA[lnkContinueWebsite.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[2014-05-02 - 16:14:59]]></Time>
+<TimeTick>1399027499</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="19" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[lnkContinueWebsite.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T14">
+<Obj plainTxt="False" ><![CDATA[lnkContinueWebsite.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:14:59]]></Time>
+<TimeTick>1399027499</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="22" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[lnkContinueWebsite.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="18" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[pgCertificateErrorNavigation]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="17" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[SeaChangeManagementConsole]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T15">
+<Obj ><![CDATA[STEP: ivm.logIn()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:15:04]]></Time>
+<TimeTick>1399027504</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="23" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.logIn()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T16">
+<Obj ><![CDATA[STEP: ivm.page(pgLogin)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:15:04]]></Time>
+<TimeTick>1399027504</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="24" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.page(pgLogin)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T17">
+<Obj ><![CDATA[STEP: ivm.IVMPage.internal_assign()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:15:04]]></Time>
+<TimeTick>1399027504</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="25" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.internal_assign()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T18">
+<Obj ><![CDATA[STEP: ivm.IVMPage.webEdit(Username)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:15:04]]></Time>
+<TimeTick>1399027504</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="26" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.webEdit(Username)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T19">
+<Obj ><![CDATA[STEP: ivm.IVMPage.webEdit(Username).internal_assign()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:15:04]]></Time>
+<TimeTick>1399027504</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="27" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.webEdit(Username).internal_assign()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T20">
+<Obj ><![CDATA[STEP: ivm.IVMPage.webEdit(Username).setValue(admin)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:15:04]]></Time>
+<TimeTick>1399027504</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="28" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.webEdit(Username).setValue(admin)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T21">
+<Obj plainTxt="False" ><![CDATA[SeaChangeManagementConsole]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[2014-05-02 - 16:15:54]]></Time>
+<TimeTick>1399027554</TimeTick>
+<Step rID="T22">
+<Obj plainTxt="False" ><![CDATA[pgLogin]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[2014-05-02 - 16:15:54]]></Time>
+<TimeTick>1399027554</TimeTick>
+<Step rID="T23">
+<Obj plainTxt="False" ><![CDATA[txtUsername.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA[""]]></Details>
+<Time><![CDATA[2014-05-02 - 16:15:54]]></Time>
+<TimeTick>1399027554</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="125" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[txtUsername.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T24">
+<Obj plainTxt="False" ><![CDATA[txtUsername.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["admin"]]></Details>
+<Time><![CDATA[2014-05-02 - 16:15:56]]></Time>
+<TimeTick>1399027556</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="127" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[txtUsername.Set]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="124" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[pgLogin]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="123" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[SeaChangeManagementConsole]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T25">
+<Obj ><![CDATA[STEP: ivm.page(pgLogin)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:15:56]]></Time>
+<TimeTick>1399027556</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="128" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.page(pgLogin)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T26">
+<Obj ><![CDATA[STEP: ivm.IVMPage.internal_assign()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:15:56]]></Time>
+<TimeTick>1399027556</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="129" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.internal_assign()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T27">
+<Obj ><![CDATA[STEP: ivm.IVMPage.webEdit(Password)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:15:56]]></Time>
+<TimeTick>1399027556</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="130" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.webEdit(Password)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T28">
+<Obj ><![CDATA[STEP: ivm.IVMPage.webEdit(Password).internal_assign()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:15:56]]></Time>
+<TimeTick>1399027556</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="131" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.webEdit(Password).internal_assign()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T29">
+<Obj ><![CDATA[STEP: ivm.IVMPage.webEdit(Password).setValue(admin@123)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:15:56]]></Time>
+<TimeTick>1399027556</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="132" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.webEdit(Password).setValue(admin@123)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T30">
+<Obj plainTxt="False" ><![CDATA[SeaChangeManagementConsole]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[2014-05-02 - 16:15:57]]></Time>
+<TimeTick>1399027557</TimeTick>
+<Step rID="T31">
+<Obj plainTxt="False" ><![CDATA[pgLogin]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[2014-05-02 - 16:15:57]]></Time>
+<TimeTick>1399027557</TimeTick>
+<Step rID="T32">
+<Obj plainTxt="False" ><![CDATA[txtPassword.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA[""]]></Details>
+<Time><![CDATA[2014-05-02 - 16:15:57]]></Time>
+<TimeTick>1399027557</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="137" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[txtPassword.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T33">
+<Obj plainTxt="False" ><![CDATA[txtPassword.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["admin@123"]]></Details>
+<Time><![CDATA[2014-05-02 - 16:15:58]]></Time>
+<TimeTick>1399027558</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="139" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[txtPassword.Set]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="136" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[pgLogin]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="135" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[SeaChangeManagementConsole]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T34">
+<Obj ><![CDATA[STEP: ivm.page(pgLogin)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:15:59]]></Time>
+<TimeTick>1399027559</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="140" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.page(pgLogin)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T35">
+<Obj ><![CDATA[STEP: ivm.IVMPage.internal_assign()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:15:59]]></Time>
+<TimeTick>1399027559</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="141" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.internal_assign()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T36">
+<Obj ><![CDATA[STEP: ivm.IVMPage.weblink(LogIn)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:15:59]]></Time>
+<TimeTick>1399027559</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="142" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.weblink(LogIn)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T37">
+<Obj ><![CDATA[STEP: ivm.IVMPage.WebLinkProxy(LogIn).internal_assign()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:15:59]]></Time>
+<TimeTick>1399027559</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="143" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.WebLinkProxy(LogIn).internal_assign()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T38">
+<Obj ><![CDATA[STEP: ivm.IVMPage.WebLinkProxy(LogIn).press()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:15:59]]></Time>
+<TimeTick>1399027559</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="144" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.WebLinkProxy(LogIn).press()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T39">
+<Obj plainTxt="False" ><![CDATA[SeaChangeManagementConsole]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[2014-05-02 - 16:15:59]]></Time>
+<TimeTick>1399027559</TimeTick>
+<Step rID="T40">
+<Obj plainTxt="False" ><![CDATA[pgLogin]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[2014-05-02 - 16:15:59]]></Time>
+<TimeTick>1399027559</TimeTick>
+<Step rID="T41">
+<Obj plainTxt="False" ><![CDATA[lnkLogIn.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[2014-05-02 - 16:15:59]]></Time>
+<TimeTick>1399027559</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="148" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[lnkLogIn.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T42">
+<Obj plainTxt="False" ><![CDATA[lnkLogIn.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:15:59]]></Time>
+<TimeTick>1399027559</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="150" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[lnkLogIn.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="147" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[pgLogin]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="146" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[SeaChangeManagementConsole]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T43">
+<Obj ><![CDATA[START Flow: Scheduled_CampaignSummary]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:10]]></Time>
+<TimeTick>1399027570</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="151" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[START Flow: Scheduled_CampaignSummary]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T44">
+<Obj ><![CDATA[SETUP TestCase: ScheduleNewReport_CampaignSummary_Schedule]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:10]]></Time>
+<TimeTick>1399027570</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="152" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[SETUP TestCase: ScheduleNewReport_CampaignSummary_Schedule]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T45">
+<Obj ><![CDATA[START TestCase: ScheduleNewReport_CampaignSummary_Schedule]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:10]]></Time>
+<TimeTick>1399027570</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="153" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[START TestCase: ScheduleNewReport_CampaignSummary_Schedule]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T46">
+<Obj ><![CDATA[SETUP TestCase: ScheduleNewReport_CampaignSummary_Schedule]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:10]]></Time>
+<TimeTick>1399027570</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="154" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[SETUP TestCase: ScheduleNewReport_CampaignSummary_Schedule]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T47">
+<Obj ><![CDATA[STEP: ivm.NavigateToMenu(Data Analytics > Reports > Scheduled Reports)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:11]]></Time>
+<TimeTick>1399027571</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="155" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.NavigateToMenu(Data Analytics > Reports > Scheduled Reports)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T48">
+<Obj ><![CDATA[STEP: ivm.page(pgCommon)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:11]]></Time>
+<TimeTick>1399027571</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="156" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.page(pgCommon)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T49">
+<Obj ><![CDATA[STEP: ivm.IVMPage.internal_assign()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:11]]></Time>
+<TimeTick>1399027571</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="157" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.internal_assign()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T50">
+<Obj ><![CDATA[STEP: ivm.IVMPage.weblink(DataAnalytics)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:12]]></Time>
+<TimeTick>1399027572</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="158" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.weblink(DataAnalytics)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T51">
+<Obj ><![CDATA[STEP: ivm.IVMPage.WebLinkProxy(DataAnalytics).internal_assign()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:12]]></Time>
+<TimeTick>1399027572</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="159" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.WebLinkProxy(DataAnalytics).internal_assign()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T52">
+<Obj ><![CDATA[STEP: ivm.IVMPage.WebLinkProxy(DataAnalytics).press()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:12]]></Time>
+<TimeTick>1399027572</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="160" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.WebLinkProxy(DataAnalytics).press()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T53">
+<Obj plainTxt="False" ><![CDATA[SeaChangeManagementConsole]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:12]]></Time>
+<TimeTick>1399027572</TimeTick>
+<Step rID="T54">
+<Obj plainTxt="False" ><![CDATA[pgCommon]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:12]]></Time>
+<TimeTick>1399027572</TimeTick>
+<Step rID="T55">
+<Obj plainTxt="False" ><![CDATA[lnkDataAnalytics.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:12]]></Time>
+<TimeTick>1399027572</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="164" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[lnkDataAnalytics.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T56">
+<Obj plainTxt="False" ><![CDATA[lnkDataAnalytics.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:12]]></Time>
+<TimeTick>1399027572</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="166" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[lnkDataAnalytics.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="163" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[pgCommon]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="162" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[SeaChangeManagementConsole]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T57">
+<Obj ><![CDATA[STEP: ivm.page(pgCommon)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:22]]></Time>
+<TimeTick>1399027582</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="167" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.page(pgCommon)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T58">
+<Obj ><![CDATA[STEP: ivm.IVMPage.internal_assign()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:22]]></Time>
+<TimeTick>1399027582</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="168" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.internal_assign()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T59">
+<Obj ><![CDATA[STEP: ivm.IVMPage.weblink(Reports)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:23]]></Time>
+<TimeTick>1399027583</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="169" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.weblink(Reports)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T60">
+<Obj ><![CDATA[STEP: ivm.IVMPage.WebLinkProxy(Reports).internal_assign()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:23]]></Time>
+<TimeTick>1399027583</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="170" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.WebLinkProxy(Reports).internal_assign()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T61">
+<Obj ><![CDATA[STEP: ivm.IVMPage.WebLinkProxy(Reports).press()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:23]]></Time>
+<TimeTick>1399027583</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="171" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.WebLinkProxy(Reports).press()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T62">
+<Obj plainTxt="False" ><![CDATA[SeaChangeManagementConsole]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:23]]></Time>
+<TimeTick>1399027583</TimeTick>
+<Step rID="T63">
+<Obj plainTxt="False" ><![CDATA[pgCommon]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:23]]></Time>
+<TimeTick>1399027583</TimeTick>
+<Step rID="T64">
+<Obj plainTxt="False" ><![CDATA[lnkReports.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:23]]></Time>
+<TimeTick>1399027583</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="175" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[lnkReports.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T65">
+<Obj plainTxt="False" ><![CDATA[lnkReports.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:23]]></Time>
+<TimeTick>1399027583</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="177" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[lnkReports.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="174" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[pgCommon]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="173" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[SeaChangeManagementConsole]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T66">
+<Obj ><![CDATA[STEP: ivm.page(pgCommon)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:33]]></Time>
+<TimeTick>1399027593</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="178" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.page(pgCommon)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T67">
+<Obj ><![CDATA[STEP: ivm.IVMPage.internal_assign()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:33]]></Time>
+<TimeTick>1399027593</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="179" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.internal_assign()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T68">
+<Obj ><![CDATA[STEP: ivm.IVMPage.weblink(ScheduledReports)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:33]]></Time>
+<TimeTick>1399027593</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="180" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.weblink(ScheduledReports)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T69">
+<Obj ><![CDATA[STEP: ivm.IVMPage.WebLinkProxy(ScheduledReports).internal_assign()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:33]]></Time>
+<TimeTick>1399027593</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="181" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.WebLinkProxy(ScheduledReports).internal_assign()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T70">
+<Obj ><![CDATA[STEP: ivm.IVMPage.WebLinkProxy(ScheduledReports).press()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:33]]></Time>
+<TimeTick>1399027593</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="182" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.WebLinkProxy(ScheduledReports).press()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T71">
+<Obj plainTxt="False" ><![CDATA[SeaChangeManagementConsole]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:34]]></Time>
+<TimeTick>1399027594</TimeTick>
+<Step rID="T72">
+<Obj plainTxt="False" ><![CDATA[pgCommon]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:34]]></Time>
+<TimeTick>1399027594</TimeTick>
+<Step rID="T73">
+<Obj plainTxt="False" ><![CDATA[lnkScheduledReports.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:34]]></Time>
+<TimeTick>1399027594</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="186" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[lnkScheduledReports.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T74">
+<Obj plainTxt="False" ><![CDATA[lnkScheduledReports.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:16:34]]></Time>
+<TimeTick>1399027594</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="188" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[lnkScheduledReports.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="185" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[pgCommon]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="184" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[SeaChangeManagementConsole]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T75">
+<Obj ><![CDATA[STEP: ivm.page(pgScheduledReports)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:17:31]]></Time>
+<TimeTick>1399027651</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="189" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.page(pgScheduledReports)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T76">
+<Obj ><![CDATA[STEP: ivm.IVMPage.internal_assign()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:17:31]]></Time>
+<TimeTick>1399027651</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="190" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.internal_assign()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T77">
+<Obj ><![CDATA[STEP: ivm.IVMPage.weblink(ScheduleNewReport)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:17:31]]></Time>
+<TimeTick>1399027651</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="191" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.weblink(ScheduleNewReport)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T78">
+<Obj ><![CDATA[STEP: ivm.IVMPage.WebLinkProxy(ScheduleNewReport).internal_assign()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:17:31]]></Time>
+<TimeTick>1399027651</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="192" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.WebLinkProxy(ScheduleNewReport).internal_assign()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T79">
+<Obj ><![CDATA[STEP: ivm.IVMPage.WebLinkProxy(ScheduleNewReport).press()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:17:31]]></Time>
+<TimeTick>1399027651</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="193" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.WebLinkProxy(ScheduleNewReport).press()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T80">
+<Obj plainTxt="False" ><![CDATA[SeaChangeManagementConsole]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[2014-05-02 - 16:17:31]]></Time>
+<TimeTick>1399027651</TimeTick>
+<Step rID="T81">
+<Obj plainTxt="False" ><![CDATA[pgScheduledReports]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[2014-05-02 - 16:17:31]]></Time>
+<TimeTick>1399027651</TimeTick>
+<Step rID="T82">
+<Obj plainTxt="False" ><![CDATA[Frame]]></Obj>
+<Details plainTxt="False" ><![CDATA[Frame]]></Details>
+<Time><![CDATA[2014-05-02 - 16:17:31]]></Time>
+<TimeTick>1399027651</TimeTick>
+<Step rID="T83">
+<Obj plainTxt="False" ><![CDATA[lnkScheduleNewReport.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[2014-05-02 - 16:17:31]]></Time>
+<TimeTick>1399027651</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="198" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[lnkScheduleNewReport.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T84">
+<Obj plainTxt="False" ><![CDATA[lnkScheduleNewReport.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:17:31]]></Time>
+<TimeTick>1399027651</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="200" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[lnkScheduleNewReport.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="11" nRep="197" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[Frame]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="196" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[pgScheduledReports]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="195" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[SeaChangeManagementConsole]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T85">
+<Obj ><![CDATA[STEP: ivm.IVMPage.webRadioGroup(ReportType)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:17:52]]></Time>
+<TimeTick>1399027672</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="201" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.webRadioGroup(ReportType)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T86">
+<Obj ><![CDATA[STEP: ivm.IVMPage.WebradioGroup(ReportType).internal_assign()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:17:52]]></Time>
+<TimeTick>1399027672</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="202" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.WebradioGroup(ReportType).internal_assign()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T87">
+<Obj ><![CDATA[STEP: ivm.IVMPage.WebradioGroup(ReportType).SelectGroupItem(Campaign Summary)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:17:52]]></Time>
+<TimeTick>1399027672</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="203" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.WebradioGroup(ReportType).SelectGroupItem(Campaign Summary)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T88">
+<Obj plainTxt="False" ><![CDATA[SeaChangeManagementConsole]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[2014-05-02 - 16:17:53]]></Time>
+<TimeTick>1399027673</TimeTick>
+<Step rID="T89">
+<Obj plainTxt="False" ><![CDATA[pgScheduledReports]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[2014-05-02 - 16:17:53]]></Time>
+<TimeTick>1399027673</TimeTick>
+<Step rID="T90">
+<Obj plainTxt="False" ><![CDATA[Frame]]></Obj>
+<Details plainTxt="False" ><![CDATA[Frame]]></Details>
+<Time><![CDATA[2014-05-02 - 16:17:53]]></Time>
+<TimeTick>1399027673</TimeTick>
+<Step rID="T91">
+<Obj plainTxt="False" ><![CDATA[radioGrpReportType.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[2014-05-02 - 16:17:53]]></Time>
+<TimeTick>1399027673</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="208" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[radioGrpReportType.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T92">
+<Obj plainTxt="False" ><![CDATA[radioGrpReportType.Select]]></Obj>
+<Details plainTxt="False" ><![CDATA["Campaign Summary"]]></Details>
+<Time><![CDATA[2014-05-02 - 16:17:53]]></Time>
+<TimeTick>1399027673</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="210" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[radioGrpReportType.Select]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="11" nRep="207" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[Frame]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="206" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[pgScheduledReports]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="205" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[SeaChangeManagementConsole]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T93">
+<Obj ><![CDATA[STEP: ivm.IVMPage.selectDate(2014-04-30)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:24]]></Time>
+<TimeTick>1399027704</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="211" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.selectDate(2014-04-30)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T94">
+<Obj plainTxt="False" ><![CDATA[SeaChangeManagementConsole]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:24]]></Time>
+<TimeTick>1399027704</TimeTick>
+<Step rID="T95">
+<Obj plainTxt="False" ><![CDATA[pgScheduledReports]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:24]]></Time>
+<TimeTick>1399027704</TimeTick>
+<Step rID="T96">
+<Obj plainTxt="False" ><![CDATA[Frame]]></Obj>
+<Details plainTxt="False" ><![CDATA[Frame]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:24]]></Time>
+<TimeTick>1399027704</TimeTick>
+<Step rID="T97">
+<Obj plainTxt="False" ><![CDATA[imgFirstDate.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:24]]></Time>
+<TimeTick>1399027704</TimeTick>
+<NodeArgs eType="Replay" icon="13" nRep="216" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[imgFirstDate.Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T98">
+<Obj plainTxt="False" ><![CDATA[lstMonth.Select]]></Obj>
+<Details plainTxt="False" ><![CDATA["Apr"]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:27]]></Time>
+<TimeTick>1399027707</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="218" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[lstMonth.Select]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T99">
+<Obj plainTxt="False" ><![CDATA[lstYear.Select]]></Obj>
+<Details plainTxt="False" ><![CDATA["2014"]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:27]]></Time>
+<TimeTick>1399027707</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="220" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[lstYear.Select]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T100">
+<Obj plainTxt="False" ><![CDATA[[ 30 ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:27]]></Time>
+<TimeTick>1399027707</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="222" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[[ 30 ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="11" nRep="215" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[Frame]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="214" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[pgScheduledReports]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="213" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[SeaChangeManagementConsole]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T101">
+<Obj ><![CDATA[STEP: ivm.IVMPage.selectDate(2014-05-01)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:30]]></Time>
+<TimeTick>1399027710</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="223" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.selectDate(2014-05-01)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T102">
+<Obj plainTxt="False" ><![CDATA[SeaChangeManagementConsole]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:31]]></Time>
+<TimeTick>1399027711</TimeTick>
+<Step rID="T103">
+<Obj plainTxt="False" ><![CDATA[pgScheduledReports]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:31]]></Time>
+<TimeTick>1399027711</TimeTick>
+<Step rID="T104">
+<Obj plainTxt="False" ><![CDATA[Frame]]></Obj>
+<Details plainTxt="False" ><![CDATA[Frame]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:31]]></Time>
+<TimeTick>1399027711</TimeTick>
+<Step rID="T105">
+<Obj plainTxt="False" ><![CDATA[imgLastDate.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:31]]></Time>
+<TimeTick>1399027711</TimeTick>
+<NodeArgs eType="Replay" icon="13" nRep="228" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[imgLastDate.Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T106">
+<Obj plainTxt="False" ><![CDATA[lstMonth.Select]]></Obj>
+<Details plainTxt="False" ><![CDATA["May"]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:33]]></Time>
+<TimeTick>1399027713</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="230" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[lstMonth.Select]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T107">
+<Obj plainTxt="False" ><![CDATA[lstYear.Select]]></Obj>
+<Details plainTxt="False" ><![CDATA["2014"]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:33]]></Time>
+<TimeTick>1399027713</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="232" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[lstYear.Select]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T108">
+<Obj plainTxt="False" ><![CDATA[[ 1 ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:33]]></Time>
+<TimeTick>1399027713</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="234" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[[ 1 ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="11" nRep="227" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[Frame]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="226" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[pgScheduledReports]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="225" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[SeaChangeManagementConsole]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T109">
+<Obj ><![CDATA[STEP: ivm.IVMPage.selectListItem(siteoption)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:37]]></Time>
+<TimeTick>1399027717</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="235" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.selectListItem(siteoption)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T110">
+<Obj plainTxt="False" ><![CDATA[SeaChangeManagementConsole]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:37]]></Time>
+<TimeTick>1399027717</TimeTick>
+<Step rID="T111">
+<Obj plainTxt="False" ><![CDATA[pgScheduledReports]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:37]]></Time>
+<TimeTick>1399027717</TimeTick>
+<Step rID="T112">
+<Obj plainTxt="False" ><![CDATA[Frame]]></Obj>
+<Details plainTxt="False" ><![CDATA[Frame]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:37]]></Time>
+<TimeTick>1399027717</TimeTick>
+<Step rID="T113">
+<Obj plainTxt="False" ><![CDATA[txtSites.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:37]]></Time>
+<TimeTick>1399027717</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="240" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[txtSites.Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T114">
+<Obj plainTxt="False" ><![CDATA[[ siteoptioncheckbox ].Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["ON"]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:39]]></Time>
+<TimeTick>1399027719</TimeTick>
+<NodeArgs eType="Replay" icon="15" nRep="242" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[[ siteoptioncheckbox ].Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T115">
+<Obj plainTxt="False" ><![CDATA[txtSites.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:40]]></Time>
+<TimeTick>1399027720</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="244" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[txtSites.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="11" nRep="239" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[Frame]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="238" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[pgScheduledReports]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="237" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[SeaChangeManagementConsole]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T116">
+<Obj ><![CDATA[STEP: ivm.IVMPage.selectListItem(provider)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:45]]></Time>
+<TimeTick>1399027725</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="245" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.selectListItem(provider)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T117">
+<Obj plainTxt="False" ><![CDATA[SeaChangeManagementConsole]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:45]]></Time>
+<TimeTick>1399027725</TimeTick>
+<Step rID="T118">
+<Obj plainTxt="False" ><![CDATA[pgScheduledReports]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:45]]></Time>
+<TimeTick>1399027725</TimeTick>
+<Step rID="T119">
+<Obj plainTxt="False" ><![CDATA[Frame]]></Obj>
+<Details plainTxt="False" ><![CDATA[Frame]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:45]]></Time>
+<TimeTick>1399027725</TimeTick>
+<Step rID="T120">
+<Obj plainTxt="False" ><![CDATA["txtProvider"- Smart Identification]]></Obj>
+<Details plainTxt="False" ><![CDATA[<P><span class="text">The smart identification mechanism was invoked.</span></P><P><SPAN class=text>Reason: object not unique (9 objects found)</SPAN></P>           <SPAN class=text><b>Original description:</b></SPAN><br>type=text<br>name=WebEdit<br>micclass=WebEdit<br>html tag=INPUT<br><P><FONT face=Verdana size=2><SPAN class=text><B>Smart Identification Alternative Description: </B></SPAN></FONT></P><FONT face=Verdana size=2><u>Base filter properties (18 objects found)&nbsp;</FONT></u><br>
+type=text<br>micclass=WebEdit<br>html tag=INPUT<br><br><FONT face=Verdana size=2><u>Optional filter properties</FONT></u><br>
+name=WebEdit<SPAN class=passed> (Used</SPAN>, 9 matches)</SPAN><br>html id=provideroption<SPAN class=passed> (Used</SPAN>, 1 matches)</SPAN><br>max length=2147483647<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>default value=Arrow Films<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>class=hasPlaceholder<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>rows=0<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>visible=1<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:45]]></Time>
+<TimeTick>1399027725</TimeTick>
+<NodeArgs eType="Replay" icon="16" nRep="250" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA["txtProvider"- Smart Identification]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T121">
+<Obj plainTxt="False" ><![CDATA[txtProvider.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:45]]></Time>
+<TimeTick>1399027725</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="251" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[txtProvider.Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T122">
+<Obj plainTxt="False" ><![CDATA[[ provideroptioncheckbox ].Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["ON"]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:47]]></Time>
+<TimeTick>1399027727</TimeTick>
+<NodeArgs eType="Replay" icon="15" nRep="253" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[[ provideroptioncheckbox ].Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T123">
+<Obj plainTxt="False" ><![CDATA[txtProvider.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:49]]></Time>
+<TimeTick>1399027729</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="255" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[txtProvider.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="11" nRep="249" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[Frame]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="248" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[pgScheduledReports]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="247" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[SeaChangeManagementConsole]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T124">
+<Obj ><![CDATA[STEP: ivm.IVMPage.selectListItem(campaign)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:53]]></Time>
+<TimeTick>1399027733</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="256" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.selectListItem(campaign)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T125">
+<Obj ><![CDATA[STEP: ivm.IVMPage.getItemValue()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:53]]></Time>
+<TimeTick>1399027733</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="257" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.getItemValue()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T126">
+<Obj ><![CDATA[STEP: .getfieldValue()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:53]]></Time>
+<TimeTick>1399027733</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="258" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: .getfieldValue()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T127">
+<Obj ><![CDATA[STEP: DataBaseConfig.openConnection(IVM_SYS_DATABASE_CONNECTION_STRING)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:53]]></Time>
+<TimeTick>1399027733</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="259" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: DataBaseConfig.openConnection(IVM_SYS_DATABASE_CONNECTION_STRING)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T128">
+<Obj ><![CDATA[STEP: DataBaseConfig.connectionState()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:53]]></Time>
+<TimeTick>1399027733</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="260" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: DataBaseConfig.connectionState()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T129">
+<Obj ><![CDATA[STEP: DataBaseConfig.executeQuery()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:53]]></Time>
+<TimeTick>1399027733</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="261" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: DataBaseConfig.executeQuery()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T130">
+<Obj ><![CDATA[STEP: DataBaseConfig.openConnection()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:53]]></Time>
+<TimeTick>1399027733</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="262" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: DataBaseConfig.openConnection()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T131">
+<Obj ><![CDATA[STEP: DataBaseConfig.connectionState()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:53]]></Time>
+<TimeTick>1399027733</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="263" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: DataBaseConfig.connectionState()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T132">
+<Obj ><![CDATA[STEP: ivm.IVMPage.webList(GroupBy)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:57]]></Time>
+<TimeTick>1399027737</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="264" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.webList(GroupBy)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T133">
+<Obj ><![CDATA[STEP: ivm.IVMPage.webList(GroupBy).internal_assign()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:57]]></Time>
+<TimeTick>1399027737</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="265" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.webList(GroupBy).internal_assign()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T134">
+<Obj ><![CDATA[STEP: ivm.IVMPage.webList(GroupBy).selectItem( By Hour )]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:57]]></Time>
+<TimeTick>1399027737</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="266" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.webList(GroupBy).selectItem( By Hour )]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T135">
+<Obj plainTxt="False" ><![CDATA[SeaChangeManagementConsole]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:57]]></Time>
+<TimeTick>1399027737</TimeTick>
+<Step rID="T136">
+<Obj plainTxt="False" ><![CDATA[pgScheduledReports]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:57]]></Time>
+<TimeTick>1399027737</TimeTick>
+<Step rID="T137">
+<Obj plainTxt="False" ><![CDATA[Frame]]></Obj>
+<Details plainTxt="False" ><![CDATA[Frame]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:57]]></Time>
+<TimeTick>1399027737</TimeTick>
+<Step rID="T138">
+<Obj plainTxt="False" ><![CDATA[lstGroupBy.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:57]]></Time>
+<TimeTick>1399027737</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="270" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[lstGroupBy.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T139">
+<Obj plainTxt="False" ><![CDATA[lstGroupBy.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:57]]></Time>
+<TimeTick>1399027737</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="272" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[lstGroupBy.Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T140">
+<Obj plainTxt="False" ><![CDATA[lstGroupBy.Select]]></Obj>
+<Details plainTxt="False" ><![CDATA["By Hour"]]></Details>
+<Time><![CDATA[2014-05-02 - 16:18:57]]></Time>
+<TimeTick>1399027737</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="274" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[lstGroupBy.Select]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="11" nRep="269" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[Frame]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="268" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[pgScheduledReports]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="267" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[SeaChangeManagementConsole]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T141">
+<Obj ><![CDATA[STEP: .ConvertTimeZone(,EDT)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:19:00]]></Time>
+<TimeTick>1399027740</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="275" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: .ConvertTimeZone(,EDT)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T142">
+<Obj ><![CDATA[STEP: .ConvertTimeZone(,EDT)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:19:00]]></Time>
+<TimeTick>1399027740</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="276" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: .ConvertTimeZone(,EDT)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T143">
+<Obj ><![CDATA[STEP: ivm.IVMPage.selectDate(2014-05-02)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:19:00]]></Time>
+<TimeTick>1399027740</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="277" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.selectDate(2014-05-02)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T144">
+<Obj plainTxt="False" ><![CDATA[SeaChangeManagementConsole]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[2014-05-02 - 16:19:00]]></Time>
+<TimeTick>1399027740</TimeTick>
+<Step rID="T145">
+<Obj plainTxt="False" ><![CDATA[pgScheduledReports]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[2014-05-02 - 16:19:00]]></Time>
+<TimeTick>1399027740</TimeTick>
+<Step rID="T146">
+<Obj plainTxt="False" ><![CDATA[Frame]]></Obj>
+<Details plainTxt="False" ><![CDATA[Frame]]></Details>
+<Time><![CDATA[2014-05-02 - 16:19:00]]></Time>
+<TimeTick>1399027740</TimeTick>
+<Step rID="T147">
+<Obj plainTxt="False" ><![CDATA[imgScheduleDate.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:19:00]]></Time>
+<TimeTick>1399027740</TimeTick>
+<NodeArgs eType="Replay" icon="13" nRep="282" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[imgScheduleDate.Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T148">
+<Obj plainTxt="False" ><![CDATA[lstMonth]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot find the "lstMonth" object's parent "pgScheduledReports" (class Page). Verify that parent properties match an object currently displayed in your application.]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:22]]></Time>
+<TimeTick>1399027882</TimeTick>
+<Step rID="T149">
+<Obj plainTxt="False" ><![CDATA[pgScheduledReports]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object's physical description:<br>miccommentproperty = <br>Mercury Class = Page<br>|Url = https://192.168.210.137:8443/mmc/scheduled_reports<br>Title = SeaChange Management Console - Scheduled Reports<br>]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:22]]></Time>
+<TimeTick>1399027882</TimeTick>
+<NodeArgs eType="Replay" icon="17" nRep="296" status="Warning" nType="Parent description" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[pgScheduledReports]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="14" nRep="295" status="Failed" nType="Run Error" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[lstMonth]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="11" nRep="281" status="Failed" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[Frame]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="280" status="Failed" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[pgScheduledReports]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="279" status="Failed" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[SeaChangeManagementConsole]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T150">
+<Obj ><![CDATA[Error #: -2147220990 Description: Cannot find the "lstMonth" object's parent "pgScheduledReports" (class Page). Verify that parent properties match an object currently displayed in your application. while executing: Exec ScheduleNewReport_CampaignSummary_Schedule [C:\IVM_Automation_Michael\IVM\\testcases\ScheduledReports\ScheduleNewReport_CampaignSummary_Schedule.vbs]]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:22]]></Time>
+<TimeTick>1399027882</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="297" status="Failed" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[Error #: -2147220990 Description: Cannot find the "lstMonth" object's parent "pgScheduledReports" (class Page). Verify that parent properties match an object currently displayed in your application. while executing: Exec ScheduleNewReport_CampaignSummary_Schedule [C:\IVM_Automation_Michael\IVM\\testcases\ScheduledReports\ScheduleNewReport_CampaignSummary_Schedule.vbs]]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T151">
+<Obj ><![CDATA[STOP TestCase: ScheduleNewReport_CampaignSummary_Schedule]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:22]]></Time>
+<TimeTick>1399027882</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="298" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STOP TestCase: ScheduleNewReport_CampaignSummary_Schedule]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T152">
+<Obj ><![CDATA[TEARDOWN TestCase: ScheduleNewReport_CampaignSummary_Schedule]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:22]]></Time>
+<TimeTick>1399027882</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="299" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[TEARDOWN TestCase: ScheduleNewReport_CampaignSummary_Schedule]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T153">
+<Obj plainTxt="False" ><![CDATA[SeaChangeManagementConsole]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:24]]></Time>
+<TimeTick>1399027884</TimeTick>
+<Step rID="T154">
+<Obj plainTxt="False" ><![CDATA[pgScheduledReports]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:24]]></Time>
+<TimeTick>1399027884</TimeTick>
+<Step rID="T155">
+<Obj plainTxt="False" ><![CDATA[Frame]]></Obj>
+<Details plainTxt="False" ><![CDATA[Frame]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:24]]></Time>
+<TimeTick>1399027884</TimeTick>
+<Step rID="T156">
+<Obj plainTxt="False" ><![CDATA[Frame.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:24]]></Time>
+<TimeTick>1399027884</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="305" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[Frame.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="11" nRep="304" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[Frame]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="303" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[pgScheduledReports]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="302" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[SeaChangeManagementConsole]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T157">
+<Obj ><![CDATA[STEP: ivm.Close()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:24]]></Time>
+<TimeTick>1399027884</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="306" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.Close()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T158">
+<Obj plainTxt="False" ><![CDATA[SeaChangeManagementConsole]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:25]]></Time>
+<TimeTick>1399027885</TimeTick>
+<Step rID="T159">
+<Obj plainTxt="False" ><![CDATA[SeaChangeManagementConsole.Close]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:25]]></Time>
+<TimeTick>1399027885</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="308" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[SeaChangeManagementConsole.Close]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="307" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[SeaChangeManagementConsole]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T160">
+<Obj ><![CDATA[STEP: ivm.startivmBrowser]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:25]]></Time>
+<TimeTick>1399027885</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="309" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.startivmBrowser]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T161">
+<Obj plainTxt="False" ><![CDATA[SystemUtil]]></Obj>
+<Details plainTxt="False" ><![CDATA[SystemUtil]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:25]]></Time>
+<TimeTick>1399027885</TimeTick>
+<Step rID="T162">
+<Obj plainTxt="False" ><![CDATA[Run "C:\Program Files (x86)\Internet Explorer\iexplore.exe",1]]></Obj>
+<Details plainTxt="False" ><![CDATA[Run "C:\Program Files (x86)\Internet Explorer\iexplore.exe",1]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:25]]></Time>
+<TimeTick>1399027885</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="313" status="Passed" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[Run "C:\Program Files (x86)\Internet Explorer\iexplore.exe",1]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="6" nRep="312" status="Passed" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[SystemUtil]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T163">
+<Obj plainTxt="False" ><![CDATA[SeaChangeManagementConsole]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:36]]></Time>
+<TimeTick>1399027896</TimeTick>
+<Step rID="T164">
+<Obj plainTxt="False" ><![CDATA[pgCertificateErrorNavigation]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:36]]></Time>
+<TimeTick>1399027896</TimeTick>
+<Step rID="T165">
+<Obj plainTxt="False" ><![CDATA[lnkContinueWebsite.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:36]]></Time>
+<TimeTick>1399027896</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="318" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[lnkContinueWebsite.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="317" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[pgCertificateErrorNavigation]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="316" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[SeaChangeManagementConsole]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T166">
+<Obj ><![CDATA[STEP: ivm.logIn()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:36]]></Time>
+<TimeTick>1399027896</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="319" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.logIn()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T167">
+<Obj ><![CDATA[STEP: ivm.page(pgLogin)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:36]]></Time>
+<TimeTick>1399027896</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="320" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.page(pgLogin)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T168">
+<Obj ><![CDATA[STEP: ivm.IVMPage.internal_assign()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:36]]></Time>
+<TimeTick>1399027896</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="321" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.internal_assign()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T169">
+<Obj ><![CDATA[STEP: ivm.IVMPage.webEdit(Username)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:36]]></Time>
+<TimeTick>1399027896</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="322" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.webEdit(Username)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T170">
+<Obj ><![CDATA[STEP: ivm.IVMPage.webEdit(Username).internal_assign()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:36]]></Time>
+<TimeTick>1399027896</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="323" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.webEdit(Username).internal_assign()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T171">
+<Obj ><![CDATA[STEP: ivm.IVMPage.webEdit(Username).setValue(admin)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:36]]></Time>
+<TimeTick>1399027896</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="324" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.webEdit(Username).setValue(admin)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T172">
+<Obj plainTxt="False" ><![CDATA[SeaChangeManagementConsole]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:36]]></Time>
+<TimeTick>1399027896</TimeTick>
+<Step rID="T173">
+<Obj plainTxt="False" ><![CDATA[pgLogin]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:36]]></Time>
+<TimeTick>1399027896</TimeTick>
+<Step rID="T174">
+<Obj plainTxt="False" ><![CDATA[txtUsername.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA[""]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:36]]></Time>
+<TimeTick>1399027896</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="329" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[txtUsername.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T175">
+<Obj plainTxt="False" ><![CDATA[txtUsername.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["admin"]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:37]]></Time>
+<TimeTick>1399027897</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="331" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[txtUsername.Set]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="328" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[pgLogin]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="327" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[SeaChangeManagementConsole]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T176">
+<Obj ><![CDATA[STEP: ivm.page(pgLogin)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:37]]></Time>
+<TimeTick>1399027897</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="332" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.page(pgLogin)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T177">
+<Obj ><![CDATA[STEP: ivm.IVMPage.internal_assign()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:37]]></Time>
+<TimeTick>1399027897</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="333" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.internal_assign()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T178">
+<Obj ><![CDATA[STEP: ivm.IVMPage.webEdit(Password)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:37]]></Time>
+<TimeTick>1399027897</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="334" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.webEdit(Password)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T179">
+<Obj ><![CDATA[STEP: ivm.IVMPage.webEdit(Password).internal_assign()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:37]]></Time>
+<TimeTick>1399027897</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="335" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.webEdit(Password).internal_assign()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T180">
+<Obj ><![CDATA[STEP: ivm.IVMPage.webEdit(Password).setValue(admin@123)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:37]]></Time>
+<TimeTick>1399027897</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="336" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.webEdit(Password).setValue(admin@123)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T181">
+<Obj plainTxt="False" ><![CDATA[SeaChangeManagementConsole]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:37]]></Time>
+<TimeTick>1399027897</TimeTick>
+<Step rID="T182">
+<Obj plainTxt="False" ><![CDATA[pgLogin]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:37]]></Time>
+<TimeTick>1399027897</TimeTick>
+<Step rID="T183">
+<Obj plainTxt="False" ><![CDATA[txtPassword.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA[""]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:37]]></Time>
+<TimeTick>1399027897</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="341" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[txtPassword.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T184">
+<Obj plainTxt="False" ><![CDATA[txtPassword.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["admin@123"]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:37]]></Time>
+<TimeTick>1399027897</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="343" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[txtPassword.Set]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="340" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[pgLogin]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="339" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[SeaChangeManagementConsole]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T185">
+<Obj ><![CDATA[STEP: ivm.page(pgLogin)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:37]]></Time>
+<TimeTick>1399027897</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="344" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.page(pgLogin)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T186">
+<Obj ><![CDATA[STEP: ivm.IVMPage.internal_assign()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:37]]></Time>
+<TimeTick>1399027897</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="345" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.internal_assign()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T187">
+<Obj ><![CDATA[STEP: ivm.IVMPage.weblink(LogIn)]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:37]]></Time>
+<TimeTick>1399027897</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="346" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.weblink(LogIn)]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T188">
+<Obj ><![CDATA[STEP: ivm.IVMPage.WebLinkProxy(LogIn).internal_assign()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:37]]></Time>
+<TimeTick>1399027897</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="347" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.WebLinkProxy(LogIn).internal_assign()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T189">
+<Obj ><![CDATA[STEP: ivm.IVMPage.WebLinkProxy(LogIn).press()]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:37]]></Time>
+<TimeTick>1399027897</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="348" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STEP: ivm.IVMPage.WebLinkProxy(LogIn).press()]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T190">
+<Obj plainTxt="False" ><![CDATA[SeaChangeManagementConsole]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:37]]></Time>
+<TimeTick>1399027897</TimeTick>
+<Step rID="T191">
+<Obj plainTxt="False" ><![CDATA[pgLogin]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:37]]></Time>
+<TimeTick>1399027897</TimeTick>
+<Step rID="T192">
+<Obj plainTxt="False" ><![CDATA[lnkLogIn.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:37]]></Time>
+<TimeTick>1399027897</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="352" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[lnkLogIn.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T193">
+<Obj plainTxt="False" ><![CDATA[lnkLogIn.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:37]]></Time>
+<TimeTick>1399027897</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="354" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[lnkLogIn.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="351" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[pgLogin]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="350" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[SeaChangeManagementConsole]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T194">
+<Obj ><![CDATA[STOP Flow: Scheduled_CampaignSummary]]></Obj>
+<Details ><![CDATA[]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:47]]></Time>
+<TimeTick>1399027907</TimeTick>
+<NodeArgs eType="User" icon="5" nRep="355" Source="SuiteController" SourceLine="26" >
+<Disp><![CDATA[STOP Flow: Scheduled_CampaignSummary]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T195">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[Unknown runtime error<BR>Function file: C:\IVM_Automation_Michael\common\lib\ReportController.vbs<BR>Line (981): &quot;        Set SummarySheet = reportController.newreportexcelobj.Sheets.Item(1)&quot;.]]></Details>
+<Time><![CDATA[2014-05-02 - 16:21:48]]></Time>
+<TimeTick>1399027908</TimeTick>
+<NodeArgs eType="Replay" icon="17" nRep="356" status="Failed" Source="C:\IVM_Automation_Michael\common\lib\ReportController.vbs" SourceLine="-1" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="2014-05-02 - 16:14:50" eTime="2014-05-02 - 16:21:50" passed="2" failed="3" warnings="1" ></Summary>
+<NodeArgs eType="StartAction" icon="4" nRep="7" status="Failed" >
+<Disp><![CDATA[SuiteController Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="6" status="Failed" >
+<Disp><![CDATA[SuiteController Iteration 1 (Row 1)]]></Disp>
+</NodeArgs>
+</DIter>
+<Summary sTime="2014-05-02 - 16:14:47" eTime="2014-05-02 - 16:21:50" passed="2" failed="3" warnings="1" ></Summary>
+<NodeArgs eType="StartTest" icon="1" nRep="3" status="Failed" >
+<Disp><![CDATA[Test SuiteController Summary]]></Disp>
+</NodeArgs>
+</Doc>
+</Report>

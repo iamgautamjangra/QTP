@@ -1,0 +1,2 @@
+DataSet,strTimeRange,strCampaign,strEmail,strStorageLocation,strReportFormat,strDataType,strComments
+datasetvalue,2014-07-04,Campaign1001-296.735,abc@xyz.com,abcd@@##,XLS,Preferred Data,This is Regionsummary report...&&&&&

@@ -1,0 +1,2 @@
+DataSet,strCampaign,strProgramPid,strEmail,strStorageLocation,strReportFormat,strDataType,strComments,strProgramPid,strProgramPid1,strChannel,strChannel1,strElementNumber,strElementNumber1,strClockNumber,strClockNumber1,strDeviceId,strDeviceId1,strBetweenDate,strBetweenDate1,strBetweenDateInv
+RawData424_20130917091450,All,All,abc@xyz.com,abcd@@##,CSV,Preferred Data,This is Raw data report...&&&&&,All,All,All,All,2,2,spot3,spot3,384866090,45562624,2013-07-01,2013-07-01 01:41:37.000,2013-07-01 01:41:37.000

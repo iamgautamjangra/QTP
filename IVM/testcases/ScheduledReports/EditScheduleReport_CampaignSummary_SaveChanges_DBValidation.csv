@@ -1,0 +1,2 @@
+SearchVal,strFirstDate,strLastDate,strSites,strProvider,strCampaign,strGroupBy,strFrequency,strStorageLocation,strReportFormat,strDataType,strEmail,strComments
+Campaign Summary,2013-08-10,2013-08-30,ACD Site 1,All,Campaign1000-242.182,By Hour,Repeat Never,,XLS,Detailed Data,nim9045@fonantrix.com,This is campaign summary report

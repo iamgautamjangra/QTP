@@ -1,0 +1,2 @@
+ReportName,strFirstDate,strLastDate,strScheduleDate,strEndDate,strReportFormat,strDataType,strEmail,strComments,strUser,strUserAction,strItemtype
+Raw Data,2014-08-01,2014-08-02,2014-02-24,2014-02-27,PDF,Preferred Data,nirdosh.chaudhary@fonantrix.com,This is campaign summary report.,admin,Schedule,Report

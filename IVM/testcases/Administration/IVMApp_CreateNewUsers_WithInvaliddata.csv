@@ -1,0 +1,4 @@
+Username,Fullname,EmailAddress,UsernameErr,FullnameErr,EmailAddressErr
+,,,Username is required.,Full name is required.,Email address is required.
+@@@@@@@@@@@@%^&*)#$%^^&??//hgjlhglghljhgkl,,xcgbdfhrtfhfhfgjhfgh,Username must contain only letters# numbers# spaces# and underscores.,Full name is required.,Email address is invalid.
+asdfghjklpasdasdfghjklpasdfghjklpasdfghfghjklpasdfghjklpasdfghjklpasdfghjklp1,,acbv,Username is too long (maximum is 50 characters),Full name is required.,Email address is invalid.

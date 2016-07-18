@@ -1,0 +1,2 @@
+DataSet,strCampaign,strProgramPid,strEmail,strStorageLocation,strReportFormat,strDataType,strComments,strBindGUID,strDeviceId,strAdPID,strAdTitle,strRegionName,strElementNumber,strCampaignName,strClockNumber,strProgramPID,strProgramPAID,strProgramTitle,strBetweenDate,strAndDate
+RawData424_20130917091450,All,All,abc@xyz.com,abcd@@##,CSV,Preferred Data,This is Raw data report...&&&&&,49-013E46E95A5B001632494EC4,001632494ec4,IDS,Hugo Boss GRY/PGHB100/020/020,Glasgow,7474,Campaign1145-28.2527,Hugo Boss GRY/PGHB100/020,All,,Pawn Stars: Gone With The Schwinn,2013-07-01,2013-08-01

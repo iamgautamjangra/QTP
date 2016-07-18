@@ -1,0 +1,2 @@
+DataSet,strEmail,strStorageLocation,strReportFormat,strDataType,strComments,strElementNumber,strElementNumber1,strProgramPID,strProgramPID1,strTimeRange,strTimeRange1,strCampaignName,strCampaignName1,strAdTitle,strAdTitle1,strClockNumber,strClockNumber1,strChannel,strChannel1,strProgramTitle,strProgramTitle1
+AllDetails505_20130924031439,abc@xyz.com,abcd@@##,XLS,Detailed Data,This is Program summary report...&&&&&,2,0,All,seachange.com,2014-02-18,2014-02-04,Campaign1143-442.954,Perf test,Copy-testsite-19-3,Copy-testsite-19-3,Spot3,Spot3,jmeter,jmeter,Title,Title

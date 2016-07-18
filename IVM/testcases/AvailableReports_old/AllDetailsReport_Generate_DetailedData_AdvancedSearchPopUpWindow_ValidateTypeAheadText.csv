@@ -1,0 +1,2 @@
+DataSet,strEmail,strStorageLocation,strReportFormat,strDataType,strComments,strTimeRange,strTimeRange1,strProgramPID,strProgramPID1,strCampaignName,strCampaignName1
+AllDetails505_20130924031439,abc@xyz.com,abcd@@##,CSV,Detailed Data,This is Campaign summary report...&&&&&,2014-,2014-02-01 to 2014-03-01,A,All,c,Campaign1145-271.547

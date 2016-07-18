@@ -1,0 +1,9 @@
+strReportName,stri,strNaturalLanguageLastDate,strFrequency,strEmail,strDataType,strReportFormat,strComments,strFirstDateErrorText,strLastDateErrorText
+Campaign Summary,10,,Repeat Never,nimish.kumar@fonantrix.com,Preferred Data,CSV,This is Campaign Summary Report,First Date must not be greater than current date.,Natural Language Selection is required.
+Campaign Summary,10,3 days after today,Repeat Never,nimish.kumar@fonantrix.com,Preferred Data,CSV,This is Campaign Summary Report,First Date must not be greater than current date.,Natural Language Selection Must be less than or equal to schedule date
+Campaign Summary,0,Yesterday,Repeat Never,nimish.kumar@fonantrix.com,Preferred Data,CSV,This is Campaign Summary Report,,Natural Language Selection Last date must be greater than or Equal to First Date.
+Campaign Summary,0,yestrday,Repeat Never,nimish.kumar@fonantrix.com,Preferred Data,CSV,This is Campaign Summary Report,,Natural Language Selection is not recognized.
+Region Summary,10,,Repeat Never,nimish.kumar@fonantrix.com,Preferred Data,CSV,This is Region Summary Report,,Natural Language Selection is required.
+Region Summary,10,3 days after today,Repeat Never,nimish.kumar@fonantrix.com,Preferred Data,CSV,This is Region Summary Report,,Natural Language Selection Must be less than or equal to schedule date
+Region Summary,0,Yesterday,Repeat Never,nimish.kumar@fonantrix.com,Preferred Data,CSV,This is Region Summary Report,,Natural Language Selection Last date must be greater than or Equal to First Date.
+Region Summary,0,yestrday,Repeat Never,nimish.kumar@fonantrix.com,Preferred Data,CSV,This is Region Summary Report,,Natural Language Selection is not recognized.

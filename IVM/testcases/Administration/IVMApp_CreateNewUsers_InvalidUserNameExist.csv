@@ -1,0 +1,2 @@
+Username,Fullname,Deactivatedate,EmailAddress,PhoneNumberType,Roles,Status,strUserldap,Deactivate,Page,UsernameErr,EmailAddressErr
+ATestUser1,ATestUser1,2010-01-07 12:00 AM,ATestUser2@com,Mobile,Administrator,Enabled,UnChecked,Checked,Show 40 rows,Username already exists.,Email address is invalid.

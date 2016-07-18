@@ -1,0 +1,2 @@
+Namevalid,PagePermissionType,PagePermission,NameInvalid,ErrName,ErrInfo
+ATestRole2,Data Analytics,Read Only,ATestRole2,Name already exists.,The role was not created due to the following issues: 

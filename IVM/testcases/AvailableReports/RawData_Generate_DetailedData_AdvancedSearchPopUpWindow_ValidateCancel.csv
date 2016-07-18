@@ -1,0 +1,2 @@
+strEmail,strStorageLocation,strReportFormat,strDataType,strComments,strBindGUID,strDeviceId,strAdPID,strAdTitle,strRegionName,strElementNumber,strCampaignName,strClockNumber,strProgramPID,strProgramPAID,strProgramTitle
+abc@xyz.com,abcd@@##,CSV,Preferred Data,This is Raw data report...&&&&&,00000000000000000000463E-3,192400283,seachange.com,Copy-testsite-19-3,ACD SITE 2,2,Campaign1145-28.2527,spot3,seachange.com,seac00000000000,title

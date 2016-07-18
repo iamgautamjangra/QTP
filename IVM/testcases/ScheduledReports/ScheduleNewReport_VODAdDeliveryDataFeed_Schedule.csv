@@ -1,0 +1,2 @@
+strFirstDate,strLastDate,strEndDate,strFrequency,strStorageLocation,strReportFormat,strEmail,strComments
+2013-08-01,2013-08-30,2013-10-30,Repeat Daily,,XLS,nimish.kumar@fonantrix.com,This is Vod Ad Delivery Data Feed report

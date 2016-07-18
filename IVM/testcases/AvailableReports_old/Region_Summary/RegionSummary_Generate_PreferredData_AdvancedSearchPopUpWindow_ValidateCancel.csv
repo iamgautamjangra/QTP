@@ -1,0 +1,2 @@
+DataSet,strEmail,strStorageLocation,strReportFormat,strDataType,strComments,strElementNumber,strElementNumber1,strRegionName,strRegionName1,strTimeRange,strTimeRange1,strCampaignName,strCampaignName1
+datasetvalue,abc@xyz.com,abcd@@##,XLS,Preferred Data,This is Regionsummary report...&&&&&,Castle,Neighbours,CHL,CHA,2013-07-01,2013-07-01,CH5 Blossom Hill Nov 12,CH4 Alan Carr Promo_Sep 12

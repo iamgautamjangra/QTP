@@ -1,0 +1,2 @@
+DataSet,strEmail,strStorageLocation,strReportFormat,strDataType,strComments,strCampaignName,strCampaignName1,strTimeRange,strTimeRange1
+datasetvalue,abc@xyz.com,abcd@@##,XLS,Preferred Data,This is Campaign summary report...&&&&&,Ca,Campaign1000-245.248,2014,2014-07-04

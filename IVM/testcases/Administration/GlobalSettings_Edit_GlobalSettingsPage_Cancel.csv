@@ -1,0 +1,2 @@
+LocationManager,ConfigurationService,ConfigurationServicePort,IPAddress,Port,UserName,ShowDate,ShowTime,PasswordExpiration,PasswordLockout,LDAPHost,Port1,SearchAttribute
+https://localhost:8443/location_manager,localhost,8543,localhost,14000,rhqadmin,Sep 10# 2012,12-hour format,20,6,localhost,389,SAMAccountName

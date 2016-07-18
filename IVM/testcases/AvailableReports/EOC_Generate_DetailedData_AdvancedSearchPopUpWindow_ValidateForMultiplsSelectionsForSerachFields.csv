@@ -1,0 +1,2 @@
+DataSet,strEmail,strStorageLocation,strReportFormat,strDataType,strComments,strElementNumber,strElementNumber1,strProgramPID,strProgramPID1,strTimeRange,strTimeRange1,strClockNumber,strClockNumber1
+EndOfCampaign425_20130917091614,abc@xyz.com,abcd@@##,XLS,Preferred Data,This is Campaign summary report...&&&&&,2,2,seachange.com,seachange.com,2014-05-01,2014-05-03,Spot3,Spot2

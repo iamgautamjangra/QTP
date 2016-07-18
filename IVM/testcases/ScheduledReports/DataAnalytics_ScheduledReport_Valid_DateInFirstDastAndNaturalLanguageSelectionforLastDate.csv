@@ -1,0 +1,2 @@
+strReportName,strNaturalLanguageFirstDate,strNaturalLanguageLastDate,strFrequency,strEmail,strDataType,strReportFormat,strComments
+Campaign Summary,yesterday,today,Repeat Never,nimish.kumar@fonantrix.com,Preferred Data,CSV,This is Campaign Summary Report

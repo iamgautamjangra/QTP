@@ -1,0 +1,2 @@
+SearchVal,strFirstDate,strLastDate,strSites,strProvider,strCampaign,strGroupBy,strFrequency,strStorageLocation,strReportFormat,strDataType,strEmail,strComments
+End of Campaign,2013-08-10,2013-08-30,Ashford,All,Campaign1000-242.182,By Hour,Repeat Weekly,,XLS,Detailed Data,nimish.kumar@fonantrix.com,This is End of Campaign report

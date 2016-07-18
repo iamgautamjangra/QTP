@@ -1,0 +1,8 @@
+strReportName,strNaturalLanguageFirstDate,strNaturalLanguageLastDate,strFrequency,strEmail,strDataType,strReportFormat,strComments,strFirstDateErrorText,strLastDateErrorText
+Campaign Summary,today,,Repeat Never,nimish.kumar@fonantrix.com,Preferred Data,CSV,This is Campaign Summary Report,,Natural Language Selection is required.
+Campaign Summary,,,Repeat Never,nimish.kumar@fonantrix.com,Preferred Data,CSV,This is Campaign Summary Report,Natural Language Selection is required.,Natural Language Selection is required.
+Campaign Summary,err@!@#,DFT@!@##,Repeat Never,nimish.kumar@fonantrix.com,Preferred Data,CSV,This is Campaign Summary Report,Natural Language Selection is not recognized.,Natural Language Selection is not recognized.
+Program Summary,today,YESTERDAY,Repeat Never,nimish.kumar@fonantrix.com,Preferred Data,CSV,This is Program Summary Report,,Natural Language Selection Last date must be greater than or Equal to First Date.
+Program Summary,ONE WEEK AGO,ONE MONTH BEFORE TODAY,Repeat Never,nimish.kumar@fonantrix.com,Preferred Data,CSV,This is Program Summary Report,,Natural Language Selection Last date must be greater than or Equal to First Date.
+Program Summary,err@!@#,DFT@!@##,Repeat Never,nimish.kumar@fonantrix.com,Preferred Data,CSV,This is Program Summary Report,Natural Language Selection is not recognized.,Natural Language Selection is not recognized.
+Program Summary,Tomarrow,Today,Repeat Never,nimish.kumar@fonantrix.com,Preferred Data,CSV,This is Program Summary Report,Natural Language Selection is not recognized.,

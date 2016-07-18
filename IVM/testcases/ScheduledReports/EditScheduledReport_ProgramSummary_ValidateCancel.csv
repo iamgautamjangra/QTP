@@ -1,0 +1,2 @@
+SearchVal,strFirstDate,strLastDate,SCHEDULED_DATE,strTime,strSites,strProvider,strCampaign,strGroupBy,strFrequency,strStorageLocation,strReportFormat,strDataType,strEmail,strComments,TableValidation
+Program Summary,2013-08-10,2013-08-30,2013-09-05,14:00,ACD Site 2,All,Campaign1000-242.182,By Hour,Repeat Never,,XLS,Detailed Data,nimish.kumar@fonantrix.com,This is Program summary report.@#$$$&&,Program Summary;Every day at 04:27;

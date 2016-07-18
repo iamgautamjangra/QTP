@@ -1,0 +1,2 @@
+strFirstDate,strLastDate,strScheduleDate,strTime,strEndDate,strSites,strProvider,strCampaign,strGroupBy,strFrequency,strStorageLocation,strReportFormat,strDataType,strEmail,strComments,strTableValidation
+2013-08-01,2013-08-02,2013-09-09,00:59,2013-10-30,Ashford,Arrow Films,WDSHE BOGOF,By Hour,Repeat Daily,,XLS,Preferred Data,abc@xyz.com,This is campaign summary report.,Campaign Summary;Every day at 00:59;

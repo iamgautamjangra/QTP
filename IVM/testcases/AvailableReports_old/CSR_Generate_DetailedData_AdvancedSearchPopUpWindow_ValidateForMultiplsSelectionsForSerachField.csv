@@ -1,0 +1,2 @@
+DataSet,strEmail,strStorageLocation,strReportFormat,strDataType,strComments,strElementNumber,strElementNumber1,strProgramPID,strProgramPID1,strTimeRange,strTimeRange1,strCampaignName,strCampaignName1,strClockNumber,strClockNumber1
+CampaignSummary416_20130917072742,abc@xyz.com,abcd@@##,XLS,Preferred Data,This is Campaign summary report...&&&&&,2,2,All,All,All,2014-02-03,All,Capaign11143-261.537,Spot3,Spot3

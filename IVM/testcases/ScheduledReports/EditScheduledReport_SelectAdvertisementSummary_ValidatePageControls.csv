@@ -1,0 +1,2 @@
+SearchVal,strFirstDate,strLastDate,strScheduleDate,strTime,strEndDate,strSites,strProvider,strCampaign,strGroupBy,strFrequency,strStorageLocation,strReportFormat,strDataType,strEmail,strComments
+Advertisement Summary,2013-07-01,2013-07-09,2013-09-27,05:10,2013-10-30,ACD Site 1,All,Campaign1000-242.182,By Hour,Repeat Daily,,XLS,Preferred Data,nimish.kumar@fonantrix.com,This is Advertisement summary report

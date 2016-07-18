@@ -1,0 +1,36 @@
+
+
+'------Administration---------
+'AuditLog
+'Authentication
+'Authorization
+'NotificationGroup
+'RBAC
+'GlobalSettings
+
+
+'------Available Reports---------
+'CampaignSummary
+ProgramSummary
+'EndOfCampaign
+'VODadDelivery
+'UniqueCustomers
+'AdvertisementSummary
+'AllDetails
+'AdvertisementAndProgramDetail
+'RawData
+'RegionSummary
+
+
+'------Schedule Reports---------
+'CommonSchedule
+'Scheduled_CampaignSummary
+'Scheduled_UniqueCustomersReport
+'Scheduled_AllDetailsReport
+'Scheduled_AdvertisementSummary
+'Scheduled_VODAdDeliveryDataFeedReport
+'Scheduled_RawData
+'Schedule_RegionSummary
+'Schedule_ProgramSummary
+'Scheduled_AdvertisementAndProgramDetailsReport
+'Scheduled_EndOfCampaign
